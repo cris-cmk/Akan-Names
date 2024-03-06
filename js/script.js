@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         const birthdate = new Date(document.getElementById('birthdate').value);
         const gender = document.getElementById('gender').value;
+        const dayOfWeek = birthdate.getDay(); // 0 (Sunday) to 6 (Saturday)
+        let akanName;
        if(gender == "select")
        {
         alert("Please Select Gender ");
@@ -13,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
         akanName = akanFemaleName(dayOfWeek);
     }
+
     });
 });
 
