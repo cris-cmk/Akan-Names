@@ -31,5 +31,5 @@ function akanFemaleName(dayOfWeek) {
 }
 function displayResult(akanName) {
     const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = `<p>Your Akan name is: <strong>${akanName}</strong></p>`;
+    resultDiv.innerHTML = `<p>Heloo Your Akan name is: <strong>${akanName} !!!</strong></p>`;
 }
