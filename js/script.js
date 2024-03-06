@@ -20,3 +20,7 @@ function akanFemaleName(dayOfWeek) {
     const femaleNames = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
     return femaleNames[dayOfWeek];
 }
+function displayResult(akanName) {
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `<p>Your Akan name is: <strong>${akanName}</strong></p>`;
+}
