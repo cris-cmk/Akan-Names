@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
         alert("Please Select Gender ");
        }
        else if (gender === 'male') {
-        akanName = getAkanMaleName(dayOfWeek);
+        akanName = akanMaleName(dayOfWeek);
         } else {
-        akanName = getAkanFemaleName(dayOfWeek);
+        akanName = akanFemaleName(dayOfWeek);
     }
     });
 });
