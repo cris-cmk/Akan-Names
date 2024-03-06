@@ -9,5 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
         alert("Please Select Gender ");
        }
 
+
     });
 });
+
+function akanMaleName(dayOfWeek) {
+    const maleNames = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
+    return maleNames[dayOfWeek];
+}
