@@ -30,7 +30,7 @@ select {
 button {
     width: 100%;
     padding: 10px;
-    background-color: #ff7b00;
+    background-color: #ff5e00;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -38,7 +38,7 @@ button {
 }
 
 button:hover {
-    background-color: #00b33f;
+    background-color: #00b3a1;
 }
 
 #result {

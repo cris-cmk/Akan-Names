@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
         akanName = akanFemaleName(dayOfWeek);
     }
+    displayResult(akanName);
 
     });
 });
