@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         const birthdate = new Date(document.getElementById('birthdate').value);
-        const gender = document.getElementById('gender').value;
-        const dayOfWeek = birthdate.getDay(); // 0 (Sunday) to 6 (Saturday)
+        let gender = document.getElementById('gender').value;
+        const dayOfWeek = birthdate.getDay(); 
+        console.log("day of the week"+dayOfWeek)
         let akanName;
        if(gender == "select")
        {
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
         akanName = akanFemaleName(dayOfWeek);
     }
-    displayResult(akanName);
+    finalResult(akanName,gender,dayOfWeek);
 
     });
 });
@@ -29,7 +30,31 @@ function akanFemaleName(dayOfWeek) {
     const femaleNames = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
     return femaleNames[dayOfWeek];
 }
-function displayResult(akanName) {
+function finalResult(akanName,gender,dayOfWeek) {
     const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = `<p>Heloo Your Akan name is: <strong>${akanName} !!!</strong></p>`;
+    let dayName = getDayName(dayOfWeek);
+    resultDiv.innerHTML = `<p> Heloo  Your gender is : <strong>${gender} !!!</strong>
+     Your birth day was on  : <strong>${dayName} !!!</strong> and Your Akan name is: <strong>${akanName} !!!</strong></p>`;
 }
+
+function getDayName(dayOfWeek) {
+    switch (dayOfWeek) {
+        case 0:
+            return "Sunday";
+        case 1:
+            return "Monday";
+        case 2:
+            return "Tuesday";
+        case 3:
+            return "Wednesday";
+        case 4:
+            return "Thursday";
+        case 5:
+            return "Friday";
+        case 6:
+            return "Saturday";
+        default:
+            return "Invalid day";
+    }
+}
+ 
